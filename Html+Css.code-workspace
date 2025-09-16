@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Html+Css",
+			"path": "."
+		},
+		{
+			"name": "ytyaya",
+			"path": "../ytyaya"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Html+Css"
+	}
+}
