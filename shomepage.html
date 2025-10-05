@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホーム</title>
+  <!-- <link rel="stylesheet" type="text/css" href="sakurazuki.css"> -->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+  <style>
+    *{
+    margin: 0;
+    padding:0;
+}
+body{
+    display:grid;
+    grid-template-rows:500px 2fr 1fr;
+    grid-template-areas:
+    "navbar" "navbar" "navbar"
+    "main" "main" "main"
+    "footer" "footer" "footer";
+}
+body{
+    background-image:url(https://images.pexels.com/photos/207247/pexels-photo-207247.jpeg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 50%;
+  }
+ul li{
+    list-style:none;
+    padding:40px;
+}
+ul li:hover{
+    background-color:rgb(102, 99, 99);
+}
+ul{
+    display:flex;
+    flex-direction:row;
+    border-bottom-style:solid;
+    border-color:#fa3838;
+    border-bottom:600px;
+}
+ul li a{
+    text-decoration:none;
+    color:white;
+}
+.m-img{
+    width:300px;
+    height:300px;
+}
+nav{
+    display:grid;
+    grid-template-rows:300px 100px;
+    grid-template-areas:"logo-section" "ul";
+    position:sticky;
+    
+}
+
+.logo-section{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:10px;
+  }
+h1{
+    margin-top:6rem;
+    font-size:40px;
+}
+@media screen {
+    
+    
+    }
+
+
+
+main{
+  grid-area:main;
+  height:50rem;
+  background-color:rgb(255, 255, 255);
+}
+
+footer{
+    grid-area:footer;
+}
+.footer-nav button{
+  width:100px;
+  height:30px;
+  background-color:#fa3838;
+  border:none;
+  color:white;
+}
+/* button for m-stone */
+.f-ms{
+  background-color:rgb(249, 161, 39);
+  width:100px;
+  height:24px;
+  color:black;
+  border-radius:calc(10px);
+  border:none;
+}
+/* child-mston */
+.first-child-msto{
+  background-color:rgb(255, 255, 255);
+  box-shadow:1px 1px 1px 1px grey;
+  width:800px;
+  height:100px;
+  text-align:center;
+}
+.second-child-msto{
+  background-color:rgb(255, 255, 255);
+  box-shadow:1px 1px 1px 1px grey;
+  width:800px;
+  height:100px;
+  text-align:center;
+}
+.third-child-msto{
+  background-color:rgb(255, 255, 255);
+  box-shadow:1px 1px 1px 1px grey;
+  width:800px;
+  height:100px;
+  text-align:center;
+}
+.fourth-child-msto{
+  background-color:rgb(255, 255, 255);
+  box-shadow:1px 1px 1px 1px grey;
+  width:800px;
+  height:100px;
+  text-align:center;
+}
+.fifth-child-msto{
+  background-color:rgb(255, 255, 255);
+  box-shadow:1px 1px 1px 1px grey;
+  width:800px;
+  height:100px;
+  text-align:center;
+}
+#m-h{
+  text-align:center;
+}
+/* main-items-grid */
+#main-items{
+  display:grid;
+  grid-template-rows:100px 50px 500px;
+  grid-template-areas:"container" "m-h" "child-group";
+  justify-content:center;
+  gap:40px
+}
+#m-h{
+  grid-area:m-h;
+}
+.child-group{
+  grid-area:child-group;
+}
+.container{
+  grid-area:container;
+  text-align:center;
+  padding-top:40px;
+}
+.first-child-msto,.second-child-msto,.third-child-msto,.fourth-child-msto,.fifth-child-msto{
+  padding-top:20px;
+}
+.child-group{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ grid-template-areas:"data-group" "data-chart";
+}
+  </style>
+</head>
+<body>
+  <nav>
+          <div class="logo-section">
+            <img src="https://sakurazuki-mjob.com/wp-content/uploads/2025/09/sakurazuki.fixlogo-1.png" class="m-img">
+            <h1>株式会社<span>桜月</span></h1>
+          </div>
+          <ul>
+            <li><a href="">ホーム</a></li>
+            <li><a href="stantou.html">担当者紹介</a></li>
+            <li><a href="">導入事例</a></li>
+            <li><a href="">サービス紹介</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+  </nav>
+  <main>
+    <div id="main-items">
+<div class="container">
+  <h2>活動内容</h2>
+<p>現地側で日本語教育∸出国支援∸通訳サポート</p>
+</div>
+<h2 id="m-h">現地送り出し期軽油で日本国内稼働者人材紹介の実績</h2>
+<div class="child-group">
+  <div class="data-group">
+<div class="first-child-msto">
+      <button class="f-ms">2024年度</button>
+      <h4>特定技能人材</h4>
+      <p>2024年度‐入国済ー100名以上</p>
+</div>
+<div class="second-child-msto">
+      <button class="f-ms">2024年度</button>
+      <h4>技人国ーエンジニア</h4>
+      <p>2024年度‐入国済ー130名</p>
+</div>
+<div class="third-child-msto">
+      <button class="f-ms">2025年度</button>
+      <h4>特定技能人材</h4>
+      <p>2025年度内定者‐入国待ちー80名</p>
+</div>
+<div class="fourth-child-msto">
+      <button class="f-ms">2025年度</button>
+      <h4>技人国ーエンジニア</h4>
+      <p>2024年度‐入国済ー30名</p>
+</div>
+<div class="fifth-child-msto">
+      <button class="f-ms">その他</button>
+      <h4>留学支援なども行っています。</h4>
+</div>
+  </div>
+<div class="data-chart">
+  <h3>The data chart</h3>
+  <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+<script>
+const xValues = ["特定技能人材", "技人国ーエンジニア", "特定技能人材", "技人国ーエンジニア", "その他"];
+const yValues = [100, 130, 80, 30, 20];
+const barColors = ["grey", "#42F2A0","grey","grey","grey"];
+
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {display: false},
+      title: {
+        display: true,
+        text: "現地送り出し期軽油で日本国内稼働者人材紹介の実績",
+        font: {size: 16}
+      }
+    }
+  }
+});
+</script>
+
+</div>
+</div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-nav">
+       <button>See More</button>
+    </div>
+  </footer>
+</body>
+</html>
