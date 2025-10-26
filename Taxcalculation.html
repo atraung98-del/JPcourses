@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax-calculation</title>
+    <scirpt scr="Taxinjapan.js"></scirpt>
+    <style>
+        body{
+            background-image:url("https://blusignalsystems.com/wp-content/uploads/2016/12/Savin-NY-Website-Background-Web1.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #m-design>input{
+            width:300px;
+            height:30px;
+        }
+        #m-design{
+            display:grid;
+            grid-template-rows:3;
+            gap:12px;
+            background-color:white;
+            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
+            width:300px;
+            align-content:center;
+            height:400px;
+            padding:50px;
+        }
+        #m-site{
+           display:grid;
+           grid-template-columns:1fr 4fr;
+           gap:2px;
+           align-items:center;
+           align-content:center;
+           margin-top:40px;
+           
+        }
+        #m-cal>input{
+            width:300px;
+            height:40px;
+            /* border:none; */
+        }
+        #m-cal{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            margin-left:10px;
+            gap:12px;
+            background-color:white;
+            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
+             height:400px;
+            padding:50px;
+        }
+        button{
+            width:100px;
+            height:30px;
+        }
+        #t-i{
+            background-color:rgb(41, 122, 243);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #t-t{
+            background-color:rgb(243, 41, 135);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #t-o{
+            background-color:rgb(243, 149, 41);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #sign-in{
+            background-color:rgb(99, 99, 243);
+            color:white;
+            width:30vh;
+            border:none;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #m-p{
+            background-color:rgb(27, 189, 21);
+            border:none;
+            color:rgb(255, 255, 255);
+
+        }
+        #m-p:hover{
+            background-color:hsl(140, 82%, 43%);
+            
+        }
+        table{
+            border:1px solid;
+            width:40rem;
+            height:auto;
+            color:rgb(114, 113, 113);
+            background-color:white;
+            border:none;
+            border-radius:2px;
+            text-align:center;
+        }
+        #amount{
+            content:'';
+        }
+        #date{
+            border:none;
+            height:50px;
+            width:100px;
+        }
+        #savingamount{
+            text-align:center;
+            border:none;
+
+        }
+    </style>
+</head>
+<body>
+ 
+    <div id="m-site">
+        <div id="m-design">
+          <h2>Incomes & Taxs</h2>
+            <label>User Name</label>
+            <input type="text" placeholder="Enter user name" id="result">
+            <label>Password</label>
+            <input type="number" placeholder="Enter your password">
+            <button id="sign-in">Sign in</button>
+        </div>
+        <div id="m-cal">
+            
+            <button id="t-i" onclick="
+            
+         
+                
+                ">Salary incomes</button>
+            <input type="number" placeholder="Enter your income" id="Income" >
+            <button id="t-t">Taxs</button>
+            <input type="number" placeholder="Enter your monthly tax" id="thetax">
+            <button id="t-o">Outcomes</button>
+            <input list="option" id="options" placeholder="Select your daily use">
+            <datalist id="option">
+               <option>Food</option>
+               <option>Drinks</option>
+               <option>Shopping</option>
+               <option>Books</option>
+               <option>Monthly internet data</option>
+            </datalist>
+           <button id="m-p" value="/" onclick="mypocket(),Dates()">My Pocket</button>
+            <table>
+                <th>
+                    <tr>
+                        <td>
+                            Date
+                        
+                        </td>
+                        <td>
+                            Amount
+                        </td>
+                        <td>
+                            Saving Amount
+                        </td>
+                    </tr>
+                  <tr>
+                    <td>
+                            <input id="date" type="text" >
+                    </td>
+                    <td>
+                        <input id="amount" type="text" style="border:none;color:black;text-align:center;">
+                    </td>
+                    <td>
+                        <input id="savingamount" type="number">
+                    </td>
+                  </tr>
+                </th>
+            </table>
+        </div>
+    </div>
+    <script>
+        const myIncome=document.getElementById('Income').value;
+          const myTax=document.getElementById('thetax').value;
+          const divided=document.getElementById('m-p').value;
+          function mypocket(){
+             const myIncome=document.getElementById('Income').value;
+          const myTax=document.getElementById('thetax').value;
+          const usage=30000;
+          document.getElementById('amount').value=myIncome-myTax;
+          document.getElementById('savingamount').value=(myIncome-myTax)-usage;
+          }
+          
+          
+          function Dates(){
+            const thedate=new Date();
+        
+        document.getElementById('date').value=thedate;
+          }
+    </script>
+</body>
+</html>
