@@ -99,139 +99,43 @@ ul li:hover{
     cursor:pointer;
     
 }
-/* taxcalculation */
- #m-design>input{
-            width:300px;
-            height:30px;
-        }
-        #m-design{
-            display:grid;
-            grid-template-rows:3;
-            gap:10px;
-            background-color:white;
-            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
-            width:300px;
-            align-content:center;
-            height:400px;
-            padding:50px;
-            animation:design 4s;
-        }
-        @keyframes design{
-            0%{
-                transform:translateX(100px);
-            }
-        }
-            
-        
-        #m-site{
-           display:grid;
-           grid-template-columns:1fr 4fr;
-           gap:2px;
-           align-items:center;
-           align-content:center;
-           margin-top:40px;
-           
-        }
-        @media (max-width:480px){
-            #m-site{
-                display:flex;
-                flex-direction:column;
-                gap:4px;
-            }
-            #m-design{
-                margin:0;
-                
-            }
-            #m-cal{
-                width:300px;
-                margin:0;
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-            }
-            
-        }
-        #m-cal>input{
-            width:300px;
-            height:40px;
-            /* border:none; */
-        }
-        #m-cal{
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            margin-left:10px;
-            gap:12px;
-            background-color:white;
-            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
-             height:400px;
-            padding:50px;
-            animation:cal 4s;
-        }
-        @keyframes cal{
-            0%{
-                transform:translateY(100px);
-            }
-        }
-        button{
-            width:100px;
-            height:30px;
-        }
-        #t-i{
-            background-color:rgb(41, 122, 243);
-            color:rgb(226, 223, 223);
-            border:none;
-            font-size:12px;
-        }
-        #t-t{
-            background-color:rgb(243, 41, 135);
-            color:rgb(226, 223, 223);
-            border:none;
-            font-size:12px;
-        }
-        #t-o{
-            background-color:rgb(243, 149, 41);
-            color:rgb(226, 223, 223);
-            border:none;
-            font-size:12px;
-        }
-        #sign-in{
-            background-color:rgb(99, 99, 243);
-            color:white;
-            width:30vh;
-            border:none;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        #m-p{
-            background-color:rgb(27, 189, 21);
-            border:none;
-            color:rgb(255, 255, 255);
-
-        }
-        #m-p:hover{
-            background-color:hsl(140, 82%, 43%);
-            
-        }
-        table{
-            border:1px solid;
-            width:40rem;
-            height:auto;
-            color:rgb(114, 113, 113);
-            background-color:white;
-            border:none;
-            border-radius:2px;
-            text-align:center;
-        }
-        #amount{
-            content:'';
-        }
-        #date{
-            border:none;
-            height:50px;
-            width:100px;
-        }
-        #savingamount{
-            text-align:center;
-            border:none;
-
-        }
+#m-p h2{
+    font-family:"Roboto",sans-serif;
+}
+#m-card{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    width:150vh;
+    align-content:center;
+    margin-top:20px;
+    margin-left:80px;
+    gap:150px;
+}
+#c-1{
+    margin-top:100px;
+    
+}
+#m-img img{
+    width:400px;
+    height:400px;
+}
+@media(max-width:480px){
+    #m-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+    margin:0;
+    gap:10px;
+    width:300px;
+    align-items:center;
+}
+#m-img img{
+    width:200px;
+    height:200px;
+}
+#c-1{
+    width:300px;
+}
+}
