@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Project-11.css">
+    <title>Document</title>
+</head>
+<body>
+    
+        <nav>
+            <h2>
+                Project <span style="color:rgb(255, 0, 106);">Eleven</span>
+            </h2>
+            <ul>
+                <li><a href="#text-data" style="text-decoration:none;color:black;">Home</a></li>
+                <li><a href="#m-site" style="text-decoration:none;color:black;">Our Projects</a></li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Our Reviews</li>
+            </ul>
+        </nav>
+
+    <div>
+    <main>
+        <div id="text-data">
+           <h2>Project <span style="color:rgb(255, 0, 106);">Eleven</span></h2>
+        </div>
+    </main>
+  
+    <aside>
+             <div id="m-site">
+        <div id="m-design">
+          <h2>Incomes & Taxs</h2>
+            <label>User Name</label>
+            <input type="text" placeholder="Enter user name" id="result">
+            <label>Password</label>
+            <input type="number" placeholder="Enter your password">
+            <button id="sign-in">Sign in</button>
+        </div>
+        <div id="m-cal">
+            
+            <button id="t-i" onclick="
+            
+         
+                
+                ">Salary incomes</button>
+            <input type="number" placeholder="Enter your income" id="Income" >
+            <button id="t-t">Taxs</button>
+            <input type="number" placeholder="Enter your monthly tax" id="thetax">
+            <button id="t-o">Outcomes</button>
+            <input list="option" id="options" placeholder="Select your daily use">
+            <datalist id="option">
+               <option>Food</option>
+               <option>Drinks</option>
+               <option>Shopping</option>
+               <option>Books</option>
+               <option>Monthly internet data</option>
+            </datalist>
+           <button id="m-p" value="/" onclick="mypocket(),Dates()">My Pocket</button>
+            <table>
+                <th>
+                    <tr>
+                        <td>
+                            Date
+                        
+                        </td>
+                        <td>
+                            Amount
+                        </td>
+                        <td>
+                            Saving Amount
+                        </td>
+                    </tr>
+                  <tr>
+                    <td>
+                            <input id="date" type="text" >
+                    </td>
+                    <td>
+                        <input id="amount" type="text" style="border:none;color:black;text-align:center;">
+                    </td>
+                    <td>
+                        <input id="savingamount" type="number">
+                    </td>
+                  </tr>
+                </th>
+            </table>
+        </div>
+    </div>
+    <script>
+        const myIncome=document.getElementById('Income').value;
+          const myTax=document.getElementById('thetax').value;
+          const divided=document.getElementById('m-p').value;
+          function mypocket(){
+             const myIncome=document.getElementById('Income').value;
+          const myTax=document.getElementById('thetax').value;
+          const usage=30000;
+          document.getElementById('amount').value=myIncome-myTax;
+          document.getElementById('savingamount').value=(myIncome-myTax)-usage;
+          }
+          
+          
+          function Dates(){
+            const thedate=new Date();
+        
+        document.getElementById('date').value=thedate;
+          }
+    </script>
+    </aside>
+</body>
+</html>
