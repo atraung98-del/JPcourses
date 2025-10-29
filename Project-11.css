@@ -56,7 +56,7 @@ main{
 aside{
     grid-area:sidebar;
     background-color:rgb(255, 255, 255);
-    height:200px;
+    height:100%;
 }
 main{
     background-image:url("https://th.bing.com/th/id/R.eb2cf7ea40700530d135c0791a9736aa?rik=Ingefb%2ftlJXQ7w&riu=http%3a%2f%2fadventure-book.com%2fwp-content%2fuploads%2f2017%2f12%2fInle-Lake-16.jpg%22&ehk=RWT1PO8NPfvLF54d6jXCMVaYx8txxVsHmwclsGlYlEE%3d&risl=&pid=ImgRaw&r=0");
@@ -101,41 +101,73 @@ ul li:hover{
 }
 #m-p h2{
     font-family:"Roboto",sans-serif;
+    padding-top:100px;
+    text-align:center;
+    text-decoration-line: underline ;
+    text-decoration-color:rgb(255, 0, 98);
+
 }
-#m-card{
+.m-card{
     display:flex;
     flex-direction:row;
     justify-content:center;
     width:150vh;
     align-content:center;
     margin-top:20px;
-    margin-left:80px;
+    margin-left:150px;
     gap:150px;
+    box-shadow:0px 0px 8px 8px rgb(226, 226, 226);
 }
-#c-1{
-    margin-top:100px;
+.c-1{
+    margin-top:80px;
+    margin-left:50px;
     
 }
-#m-img img{
+.m-img img{
     width:400px;
-    height:400px;
+    height:300px;
 }
 @media(max-width:480px){
-    #m-card{
+    .m-card{
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-content:center;
-    margin:0;
-    gap:10px;
+    gap:15px;
     width:300px;
     align-items:center;
+    background-color:white;
+    box-shadow:0px 0px 8px 8px rgb(226, 226, 226);
+    margin-left:8px;
+    animation:myani 2s ease-out;
+    margin-top:100px;
 }
-#m-img img{
+ul{
+    display:flex;
+    flex-direction:row;
+    gap:15px;
+    padding-top:20px;
+    font-size:12px;
+}
+.m-img img{
     width:200px;
     height:200px;
+   
 }
-#c-1{
+.c-1{
     width:300px;
+    
+    text-align:center;
+}
+@keyframes myani{
+    0%{
+        transform:translateY(0px);
+    }
+    20%{
+        transform:translateY(100px)
+    }
+    100%{
+        transform:translateY(0px);
+    }
 }
 }
