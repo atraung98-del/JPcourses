@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dashboardUI.css">
+    <title>Javascript</title>
+</head>
+<style>
+    #mymonth:hover{
+        background-color:rgb(58, 57, 57);
+    }
+    @keyframes fuyu{
+0%{
+    transform:translateY(40px);
+}
+100%{
+    transform:translateY(0px);
+}
+    }
+    #m-img{
+        display:hidden;
+    }
+    
+button{
+    width:300px;
+    height:34px;
+    background-color:black;
+    color:white;
+    border:none;
+}
+#btn{
+    width:100px;
+    height:20px;
+    background-color:black;
+    color:white;
+    font-size:12px;
+    border:none;
+}
+button:hover{
+    background-color:rgb(75, 74, 74);
+}
+#demo-collect{
+    display:flex;
+    flex-direction:row;
+    
+    gap:4px;
+}
+</style>
+<body>
+   <button onclick="mydays()">My days</button>
+    
+    <script>
+        
+        function monthinYear(){
+            let month=prompt("write anything",1);
+            if(month==12||month==1||month==2){
+                result='冬';
+                let img=document.createElement('img');
+                img.src='https://wallpaperaccess.com/full/22631.jpg';
+                document.body.appendChild(img);
+                img.style.width="250px".height="350px";
+                img.style.animation="fuyu 2s";
+                if(result='冬'){
+                    result=img;
+                    value="冬";
+                }
+                 document.getElementById('demo').innerHTML=value;
+            } if(month>=3&&month<=5){
+                result='春';
+                let img=document.createElement('img');
+                img.src='https://img.freepik.com/premium-photo/mesmerizing-nature-vivid-colors_720722-23223.jpg';
+                document.body.appendChild(img);
+                img.style.width="300px";
+                img.style.animation="fuyu 2s";
+                if(result='春'){
+                    result= img;
+                    value="春";
+                }
+                document.getElementById('demo-2').innerHTML=value;
+                window.localstorage(getElementById('demo'));
+            } if(month>=6&&month<=8){
+                result='秋';
+                let img=document.createElement('img');
+                img.src='https://tse1.mm.bing.net/th/id/OIP.XfRN5YIY_rv2sNBtLFH2IAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3';
+                document.body.appendChild(img);
+                img.style.width="300px";
+                img.style.animation="fuyu 2s";
+                if(result='秋'){
+                    result= img;
+                    value="秋";
+                }
+                document.getElementById('demo').innerText=value;
+            }if(month>=9&&month<=11){
+                result='夏';
+                let img=document.createElement('img');
+                img.src='https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ontsnlzylasuepc6ruqj/KorankeiObaraTourwithSakuraMapleLeavesfromOsakaorKyoto.jpg';
+                document.body.appendChild(img);
+                img.style.width="300px";
+                img.style.animation="fuyu 2s";
+                if(result='夏'){
+                    result= img;
+                    value="夏";
+                }
+                document.getElementById('demo').innerText=value;
+            }
+            
+        }
+        function order(){
+            let orderShipped="pending";
+switch (orderShipped){
+    case "pending":
+    console.log("your order is pending")
+    break;
+    case "shipped":
+        document.getElementById("demo").innerText="your order is shipped"
+        break;
+}
+        }
+
+
+        // switch//
+        function myscore(){
+             let score=100;
+            let myscore=document.getElementById("m-input").value;
+           if(myscore<=score&&myscore>=60){
+            result="A level";
+            console.log(result);
+           }  if(myscore==50){
+            result="B level";
+            console.log(result);
+           } if(myscore<50){
+            result="C level";
+            console.log(result);
+           }
+        }
+           
+      function mydays(){
+        let hours=new Date().getMinutes();
+        let days=new Date().getUTCDate();
+    
+        switch(hours){
+            case 2:
+                console.log("it is 2")
+                break;
+            case hours:
+                console.log("It is"+hours)
+                break;
+        }
+                switch(days){
+                    case days:
+                        console.log("it is"+days)
+                        break;
+                }
+        }
+    
+
+        // switch//
+       const action = "say_hi";
+switch (action) {
+  case "say_hello": {
+    const message = "hello";
+    console.log(message);
+    break;
+  }
+  case "say_hi": {
+    const message = "hi";
+    console.log(message);
+    break;
+  }
+  default: {
+    console.log("Empty action received.");
+  }
+}
+    </script>
+    <div id="demo-collect">
+         <p id="demo">
+    </p>
+    <p id="demo-2"></p>
+    </div>
+   <input type="number" id="m-input">
+   <button onclick="monthinYear()" id="btn">Score</button>
+</body>
+</html>
