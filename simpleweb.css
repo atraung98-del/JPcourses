@@ -1,0 +1,287 @@
+ body{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    grid-template-areas:
+    "navbar navbar" 
+    "sidebar main"
+    "sidebar footer";
+ }
+ nav{
+    grid-area:navbar;
+    background-color:rgb(59, 117, 241);
+    padding:10px;
+    position:sticky;
+    top:0;
+    color:rgb(255, 255, 255);
+ }
+ aside{
+    grid-area:sidebar;
+    background-color:rgb(255, 255, 255);
+    align-self:normal;
+    border-right:1px solid grey;
+    position:static;
+    width:150px;
+ }
+ main{
+    grid-area:main;
+    margin-left:0px;
+    height:60em;
+    position:static;
+ }
+ /* footer{
+    grid-area:footer;
+    background-color:black;
+    color:white;
+    padding:3rem 3rem;
+    height:8em;
+ } */
+ /* ulli */
+ nav ul{
+   list-style:none;
+   display:flex;
+   flex-direction:row;
+   gap:3em;
+   color:white;
+}
+nav{
+   display:flex;
+   flex-direction:row;
+   gap:5em;
+}
+button{
+   background-color:aqua;
+   color:black;
+   /* border-radius:1em; */
+   width:100px;
+   height:30px;
+   margin-top:1em;
+}
+#activebtn{
+   background-color:rgb(55, 243, 118);
+   color:rgb(0, 0, 0);
+   width:50px;
+   height:20px;
+   font-size:10px;
+   border:none;
+   border-radius:50px;
+}
+#deletebtn{
+   background-color:rgb(243, 55, 118);
+   color:rgb(0, 0, 0);
+   width:50px;
+   height:20px;
+   font-size:10px;
+   border:none;
+   border-radius:50px;
+}
+#editbtn{
+   background-color:rgb(55, 143, 243);
+   color:rgb(8, 8, 8);
+   width:50px;
+   height:20px;
+   font-size:10px;
+   border:none;
+   border-radius:50px;
+}
+button:hover{
+   background-color: rgb(255, 255, 255);
+   color:black;
+}
+/* taskbar */
+ul{
+   list-style:none;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-evenly;
+   gap:2rem;
+   
+}
+#cancel{
+   background-color:rgb(240, 61, 61);
+   color:white;
+   border-radius:2px;
+   align-self:center;
+   margin-bottom:10px;
+}
+#cancel:hover{
+   background-color:black;
+   color:white;
+}
+.lihome{
+   display:flex;
+   gap:5px;
+   
+}
+.lihome:hover{
+   cursor:pointer;
+   text-decoration: underline;
+   text-decoration-color: rgb(255, 0, 76);
+   
+}
+.liinvoice{
+   display:flex;
+   gap:5px;
+}
+.licustomers{
+   display:flex;
+   gap:5px;
+}
+.liincomedata{
+   display:flex;
+   gap:5px;
+}
+.hnp{
+   display:flex;
+   gap:5px;
+   font-weight:lighter;
+}
+.logout{
+   display:flex;
+   gap:5px;
+   font-weight:lighter;
+   color:brown;
+}
+.hanburger{
+   visibility:visible;
+   cursor:pointer;
+   
+}
+.hanburger:hover aside{
+   visibility:hidden;
+
+}
+#cross{
+   color:blue;
+   visibility: hidden;
+}
+
+#user{
+   width:200px;
+   height:30px;
+   border-radius:1em;
+}
+#password{
+   width:200px;
+   height:30px;
+   border-radius:1em;
+}
+/* formdata */
+/* dashboard */
+#m-design>input{
+            width:300px;
+            height:30px;
+        }
+        #m-design{
+            display:grid;
+            grid-template-rows:3;
+            gap:12px;
+            background-color:white;
+            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
+            width:300px;
+            align-content:center;
+            height:400px;
+            padding:50px;
+            animation:design 1s;
+        }
+        @keyframes design{
+            0%{
+                transform:translateX(100px);
+            }
+        }
+            
+        
+        #m-site{
+           display:grid;
+           grid-template-columns:1fr 4fr;
+           gap:2px;
+           align-items:center;
+           align-content:center;
+           margin-top:40px;
+           
+        }
+        #m-cal>input{
+            width:300px;
+            height:40px;
+            /* border:none; */
+        }
+        #m-cal{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            margin-left:10px;
+            gap:12px;
+            background-color:white;
+            box-shadow: 0px 0px 3px 3px rgb(214, 214, 214);
+             height:400px;
+            padding:50px;
+            animation:cal 2s;
+        }
+        @keyframes cal{
+            0%{
+                transform:translateY(100px);
+            }
+        }
+        button{
+            width:100px;
+            height:30px;
+        }
+        #t-i{
+            background-color:rgb(41, 122, 243);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #t-t{
+            background-color:rgb(243, 41, 135);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #t-o{
+            background-color:rgb(243, 149, 41);
+            color:rgb(226, 223, 223);
+            border:none;
+            font-size:12px;
+        }
+        #sign-in{
+            background-color:rgb(99, 99, 243);
+            color:white;
+            width:30vh;
+            border:none;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #m-p{
+            background-color:rgb(27, 189, 21);
+            border:none;
+            color:rgb(255, 255, 255);
+
+        }
+        #m-p:hover{
+            background-color:hsl(140, 82%, 43%);
+            
+        }
+        table{
+            border:1px solid;
+            width:40rem;
+            height:auto;
+            color:rgb(114, 113, 113);
+            background-color:white;
+            border:none;
+            border-radius:2px;
+            text-align:center;
+        }
+        #amount{
+            content:'';
+        }
+        #date{
+            border:none;
+            height:50px;
+            width:100px;
+        }
+        #savingamount{
+            text-align:center;
+            border:none;
+
+        }
+
+
