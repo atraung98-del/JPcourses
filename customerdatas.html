@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="simpleweb.css">
+    <title>customerdata</title>
+    <style>
+
+        #container{
+            background-color:white;
+            box-shadow:0px 4px 4px 4px gray;
+            height:40rem;
+        }
+        #mytable{
+           
+            height:300px;
+            overflow-Y: scroll;
+        }
+        #addbtn{
+            background-color:rgb(252, 251, 251);
+            color:rgb(83, 82, 82);
+            width:100px;
+            height:25px;
+            font-size:12px;
+            border:none;
+            border-radius:50px;
+            position:relative;
+            margin:4px;
+            
+        }
+        #addbtn:hover{
+            background-color:rgb(165, 164, 164);
+            color:white;
+        }
+        #searchid{
+            margin:0 auto;
+            margin-right:68%;
+            padding:4px 5px;
+            width:30%;
+            border-radius:50px;
+            position:block;
+            display:flex;
+            align-items: center;
+            transition:box-shadow 0.3s;
+            border:1px solid black;
+            margin-bottom:10px;
+        }
+        
+        #searchid input{
+            height:20px;
+            font-size:14px;
+            padding-left:9px;
+            outline:none;
+            border:none;
+            width:100%;
+        }
+       #searchicon{
+        font-size:20px;
+       }
+       #userform{
+        /* background-color:rgb(64, 65, 66); */
+
+        text-align: center;
+        color:white;
+        display:flex;
+        flex-direction:row;
+        align-content: center;
+        padding:30px;
+
+       }
+       #table-layout{
+        width:70rem;
+        
+       }
+       #inputcustomerdata{
+        background-color:rgb(59, 117, 241);
+        height:80px;
+       }
+       #datedata{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        margin-left:10px;
+       }
+       #container{
+        animation:userdata 2s;
+       }
+       @keyframes userdata{
+        0%{
+            transform:translateY(120px);
+        }
+        100%{
+            transform:translateY(0px);
+        }
+       }
+       #exportdata{
+        margin-left:90%;
+        background-color:rgb(59, 117, 241);
+        color:white;
+        font-weight:bold;
+        border:none;
+        border-radius:50px;
+        margin-bottom:4px;
+       }
+       
+    </style>
+</head>
+<body>
+     <h1 id="myh2"></h1>
+            
+            <nav>
+                <ul>
+                    <!-- <li style="cursor:pointer;"><a src="./pagecombine/hireyou.html">Home</li> -->
+                    <li style="font-weight:bold;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: large;">Project <span style="color:rgb(228, 7, 55)">Eleven</span></li>
+                    <li style="padding-top:4px;"><a href="Project-11.html" style="text-decoration:none;color:rgb(255, 255, 255);">More info</a></li>
+                </ul>
+                <!-- <button><a href="/pagecombine/hireyou.html"></a>Sing in/up</button> -->
+            </nav>
+            <aside>
+                <ul id="datalist">
+                    <li class="hanburger"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-xmark" id="cross"></i></li>
+                    <li class="lihome"><i class="fa-solid fa-chart-line"></i>Dashboard</li>
+                    <li class="liinvoice"><i class="fa-solid fa-file-lines"></i>Invoice</li>
+                    <li class="licustomers"><a href="customerdatas.html"><i class="fa-regular fa-user"></i>Customers</li>
+                    <li class="licustomers"><a href="customerdatas.html"><i class="fa-solid fa-chart-pie"></i>KPI</li>
+                    <li class="liincomedata"><i class="fa-solid fa-money-bill-trend-up"></i><a href="jobingo.html" style="text-decoration:none;color:black;">Income</a></li>
+                    <li class="hnp"><i class="fa-solid fa-circle-info"></i>Help & Supports</li>
+                    <li class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</li>
+                </ul>
+                    
+            </aside>
+            <main><h1>User Data</h1>
+   <div id="container">
+            <div id="datedata">
+               <i class="fa-solid fa-calendar"></i><p id="dateandday" style="padding-left:5px;"></p>
+            </div>
+            <div id="searchid"><input type="text" placeholder="Search customer by id or name"><i class="fa-solid fa-magnifying-glass" id="searchicon"></i></div>
+           <button id="exportdata"><i class="fa-solid fa-plus"></i>Export</button>
+        <div id="inputcustomerdata">
+            <form id="userform">
+            <label>Customer Name</label><input type="text" placeholder="Customer-name" id="username" style="height:30px;border:none;border-radius:50px;padding-left:10px;outline:none;">
+           <label>Customer Id</label> <input type="number" placeholder="Customer-id" id="userid" style="height:30px;border:none;border-radius:50px;padding-left:10px;outline:none;">
+           <label>Customer Status</label><input type="text" placeholder="Customer-status" id="userstatus" style="height:30px;border:none;border-radius:50px;padding-left:10px;outline:none;">
+           <label>User Behabiours</label><input list="text" placeholder="Customer-status" id="userbehaviour" style="height:30px;border:none;border-radius:50px;padding-left:10px;outline:none;">
+           <datalist id="text"> <option>24</option>
+            <option>Single</option>
+            <option>Family Member</option>
+            <option>Mid level property</option>
+            <option>Higher level propery</option></datalist>
+           <button id="addbtn">Add</button>
+            </form>
+        </div>
+        <div id="mytable">
+            <table id="table-layout">
+                <th id="ui">
+                   <tr id="ux">
+                    <td rowspan="1"style="background-color:orange;border-radius:50px;">
+                        Date
+                    </td>
+                    <td colspan="2" style="width:100px;background-color:orange;border-radius:50px;">
+                        User Name
+                    </td>
+                    <td colspan="2"style="width:100px;background-color:orange;border-radius:50px;">
+                        User Id
+                    </td>
+                    <td colspan="2"style="width:100px;background-color:orange;border-radius:50px;">
+                        User Status
+                    </td>
+                    <td colspan="2"style="width:100px;background-color:orange;border-radius:50px;">
+                        User Behaviours
+                    </td>
+                   </tr>
+                </th>
+                <tbody style="width:900px" id="ttbody">
+                    <tr id="userinputdata" style="width:900px;">
+                        <td id="inputdatas">
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+   </div>
+   <script>
+    const form=document.querySelector('#userform');
+    const table=document.querySelector('#table-layout');
+    const tbody=document.querySelector('tbody');
+
+    function inputdata(e){
+        e.preventDefault();
+        const username=document.getElementById('username').value;
+        const userid=document.getElementById('userid').value;
+        const userstatus=document.getElementById('userstatus').value;
+        const userbehaviour=document.getElementById('userbehaviour').value;
+        const dates=new Date();
+       const collectData= tbody.innerHTML+=`<tr style="background-color:white;box-shadow:0px 2px 2px 0px gray;height:50px;"id="usercatch">
+            <td style="width:150px;">${dates}</td>
+            <td colspan="2"style="width:100px;">${username}</td>
+            <td colspan="2"style="width:100px;">${userid}</td>
+            <td colspan="2"style="width:100px;">${userstatus}</td>
+            <td colspan="2"style="width:100px">${userbehaviour}</td>
+           <td><button id="activebtn">Active</button>
+            <button id="editbtn">Edit</button>
+            <button id="deletebtn">Delete</button>
+            </td>
+            </tr>
+           
+            `
+            document.getElementById('username').value=""
+            document.getElementById('userid').value=""
+            document.getElementById('userstatus').value=""
+            document.getElementById('userbehaviour').value=""
+    localStorage.removeItem('nameitems');
+    localStorage.removeItem('list');
+    const inputlist=document.querySelector('#inputdatas');
+   
+    
+}
+    
+    form.addEventListener('submit',(inputdata));
+   
+    let day;
+    switch(new Date().getDay()){
+        case 0:
+            day="Sunday"
+            break;
+        case 1:
+            day="Monday"
+            break;
+        case 2:
+            day="Tuesday"
+            break;
+        case 3:
+            day="Wednesday"
+            break;
+        case 4:
+            day="Thusday"
+            break;
+        case 5:
+            day="Friday"
+            break;
+        case 6:
+            day="Saturday"
+            break;
+    }
+     document.getElementById('dateandday').innerText="Today is"+" "+day;
+    
+    
+   </script>
+    
+</body>
+</html>
