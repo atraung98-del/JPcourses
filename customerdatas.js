@@ -29,19 +29,19 @@ const form=document.querySelector('#userform');
             document.getElementById('userid').value=""
             document.getElementById('userstatus').value=""
             document.getElementById('userbehaviour').value=""
-            const tr=document.querySelector('#usercatch');
     localStorage.removeItem('nameitems');
     localStorage.removeItem('list');
-    const inputlist=document.querySelector('#inputdatas');
-   localStorage.setItem('listitems',JSON.stringify(userExp.toString));
-    
 }
     
     form.addEventListener('submit',(userExp));
-    function deleteItems(){
-    userExp=removeEventListener(collectData.innerHTML);
-    console.log(userExp);
-};
+     const hamburger=document.querySelector('.hamburger');
+     const datalist=document.querySelector('.datalist');
+     hamburger.addEventListener('click',()=>{
+        hamburger.classList.toggle("active");
+        datalist.classList.toggle("active");
+     });
+//    ...///
+
     let day;
     switch(new Date().getDay()){
         case 0:
@@ -67,5 +67,6 @@ const form=document.querySelector('#userform');
             break;
     }
      document.getElementById('dateandday').innerText="Today is"+" "+day;
+    
     
     
