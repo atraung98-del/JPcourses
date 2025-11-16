@@ -47,6 +47,7 @@ nav{
    display:flex;
    flex-direction:row;
    gap:5em;
+   justify-content:center;
 }
 button{
    background-color:aqua;
@@ -88,13 +89,13 @@ button:hover{
    color:black;
 }
 /* taskbar */
-ul{
+.datalist{
    list-style:none;
    display:flex;
    flex-direction:column;
    justify-content:space-evenly;
    gap:2rem;
-   
+   text-decoration:none;
 }
 #cancel{
    background-color:rgb(240, 61, 61);
@@ -118,17 +119,39 @@ ul{
    text-decoration-color: rgb(255, 0, 76);
    
 }
+
 .liinvoice{
    display:flex;
    gap:5px;
 }
+.likpi{
+   display:flex;
+   flex-direction:column;
+   gap:5px;
+}
+.likpi a{
+    text-decoration:none;
+   color:black;
+}
 .licustomers{
    display:flex;
    gap:5px;
+
+}
+.licustomers a{
+   color:black;
 }
 .liincomedata{
    display:flex;
    gap:5px;
+}
+.liincomedata a{
+   text-decoration:none;
+   color:black;
+}
+.licustomers a{
+   text-decoration:none;
+  
 }
 .hnp{
    display:flex;
@@ -141,19 +164,7 @@ ul{
    font-weight:lighter;
    color:brown;
 }
-.hanburger{
-   visibility:visible;
-   cursor:pointer;
-   
-}
-.hanburger:hover aside{
-   visibility:hidden;
 
-}
-#cross{
-   color:blue;
-   visibility: hidden;
-}
 
 #user{
    width:200px;
@@ -283,5 +294,102 @@ ul{
             border:none;
 
         }
+        @media(max-width:680px){
+         .hamburger{
+   visibility: visible;
+}
+.bar{
+   visibility: visible;
+}
+         .liinvoice{
+   display:flex;
+   gap:5px;
+}
+.likpi{
+   display:flex;
+   flex-direction:column;
+   gap:5px;
+}
+.likpi a{
+    text-decoration:none;
+   color:rgb(255, 255, 255);
+}
+.licustomers{
+   display:flex;
+   gap:5px;
+   
+}
+.licustomers a{
+   color:white;
+}
+.liincomedata{
+   display:flex;
+   gap:5px;
+}
+.liincomedata a{
+   text-decoration:none;
+   color:rgb(255, 255, 255);
+}
+.licustomers a{
+   text-decoration:none;
+  
+}
+         body{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    grid-template-areas:
+    "navbar navbar" 
+    "sidebar sidebar"
+    "main main";
+ }
+ .datalist{
+   display:none;
+ }
+ 
+ 
+   .bar{
+        width:25px;
+        display:block;
+        height:3px;
+        margin:5px auto;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        background-color:rgb(255, 255, 255);
+        cursor:pointer;
+      }
+      .hamburger.active{
+   display:block;
+   margin-left:-4px;
+   margin-top:15px;
+   
+ }
+ .hamburger.active .bar:nth-child(2){
+   opacity:0;
+ }
+ .hamburger.active .bar:nth-child(1){
+   transform:translateY(8px)rotate(45deg);
+ }
+ .hamburger.active .bar:nth-child(3){
+   transform:translateY(-8px)rotate(-45deg);
+ }
+ aside{
+   border:none;
+ }
+ .datalist.active{
+   list-style:none;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-evenly;
+   gap:2rem;
+   position:absolute;
+   background-color:black;
+   color:white;
+   width:400px;
+   height:500px;
+
+}
+ }
+ 
+        
 
 
