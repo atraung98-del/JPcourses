@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="FoodinJapan.css">
+    <title>usercreatedacc</title>
+</head>
+<body>
+    <script src="FoodinJapan.js"></script>
+    <div id="m-user">
+    <i class="fa-solid fa-circle-user" id="usericon"></i>
+    <p id="user-name"></p>
+    <div id="searchid">
+    <input type="search" id="search-bar" placeholder="Search products">
+    <i class="fa-solid fa-magnifying-glass" id="magnify"></i>
+    </div>
+    </div>
+    <div id="loader"></div>
+    <script>
+        const userdecle=document.getElementById('user-name');
+        const ufirstname=sessionStorage.getItem('firstname').replace(/['"]/g, '');
+        const ulastname=sessionStorage.getItem('lastname').replace(/['"]/g, '');
+        if(ufirstname&&ulastname){
+    userdecle.innerHTML=`${ufirstname}_${ulastname}`;
+}else{
+    alert('No data found! Please try agian.')
+}
+    </script>
+</body>
+</html>
