@@ -12,7 +12,6 @@ function createAccount(){
     copsw.value,];
      
     if(firstname.value&&lastname.value&&cpsw.value&&copsw.value){
-        window.location.href="usercreatedacc.html";
         alert('You created account successfully!');
        
     }else{
@@ -23,8 +22,8 @@ function createAccount(){
 const user=localStorage.getItem('newuser-data');
 console.log(user);
 
-// loginform//
-document.getElementById('loginform').addEventListener('submit',e=>{
+const myuser=document.getElementById('myuser');
+myuser.addEventListener('submit',e=>{
             e.preventDefault()
             const fname=document.getElementById('f-name').value;
             const lname=document.getElementById('l-name').value;
@@ -35,17 +34,8 @@ document.getElementById('loginform').addEventListener('submit',e=>{
             sessionStorage.setItem('lastname',JSON.stringify(lname));
             sessionStorage.setItem('pswcre',JSON.stringify(pswcre));
             sessionStorage.setItem('pswcom',JSON.stringify(pswcom));
-            createAccount();
+            const userofname=sessionStorage.setItem('username',fname+lname);
+            window.location.href="login.html";
+            createAccount(); 
             
-            // window.location.href="usercreatedacc.html"
-            loadData();
 });
-function loadData(){
-    document.getElementById('loader').style.display='block';
-
-setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-    alert("Loaded!");
-  }, 2000);
-}
-
