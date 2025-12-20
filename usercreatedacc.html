@@ -16,6 +16,9 @@
     <input type="search" id="search-bar" placeholder="Search products">
     <i class="fa-solid fa-magnifying-glass" id="magnify"></i>
     </div>
+    <div id="logOut">
+        <button id="logoutSession">Log Out</button>
+    </div>
     </div>
     <div id="loader"></div>
     <script>
@@ -27,6 +30,16 @@
 }else{
     alert('No data found! Please try agian.')
 }
+// logout//
+// logoutSession.addEventListener('click',e=>{
+//     e.preventDefault();
+//     sessionStorage.setItem('username',fname+lname);
+//     sessionStorage.setItem('password',pswcom);
+//     sessionStorage.clear();
+//     window.location.href='login.html';
+    
+// })
+
     </script>
 </body>
 </html>
