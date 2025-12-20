@@ -63,9 +63,9 @@ nav span{
     height:300px;
     margin:200px 200px;
 }
-/* @keyframes formani {
+@keyframes formani {
     0%{
-        transform:translateX(150px);
+        transform:translateX(250px);
     }
     50%{
         transform:translateX(0px);
@@ -73,15 +73,15 @@ nav span{
     100%{
         transform:translateX(0px);
     }
-} */
-form{
+}
+#loginform{
     
     width:500px;
-    animation:formani 1s;
+    animation:formani 2s;
     
     display:flex;
     flex-direction:column;
-    gap:4px;
+    gap:8px;
 }
 #f-name{
     outline:none;
@@ -189,4 +189,52 @@ form{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-
+/* login-form */
+#logIn{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    width:200px;
+    height:300px;
+    justify-content:center;
+}
+#logipt{
+    height:24px;
+    outline:none;
+    padding:2px;
+    width:250px;
+}
+#logpsw{
+    height:24px;
+    outline:none;
+    padding:2px;
+    width:250px;
+}
+#logform{
+    margin-left:40%;
+    margin-top:10%;
+    animation:logani 2s;
+}
+/* @keyframes logani {
+    0%{
+        transform:translateY(-250px);
+    }
+    50%{
+        transform:translateY(0px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+} */
+#userlog{
+    height:30px;
+    border:none;
+    border-radius:2px;
+    width:257px;
+    background-color: #69bff8;
+    color:rgb(255, 255, 255);
+}
+#headlog{
+    margin-left:12%;
+    font-size:20px;
+}
