@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="FoodinJapan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login-account</title>
 </head>
 <body>
@@ -16,9 +17,10 @@
         <label>Password:</label>
         <input type="text" id="logpsw"placeholder="Enter password" required>
         <button id="userlog">Log in</button>
-         
+         <p id="error" style="color:rgb(173, 98, 98);border-radius:4px;width:500px;"></p>
+         <i class="fa-regular fa-circle-xmark" style="display:none;"></i>
     </form>
-   <p id="error" style="color:red;background-color:aquamarine;border-radius:4px;"></p>
+   <!-- <p id="error" style="color:red;background-color:aquamarine;border-radius:4px;width:200px;"></p> -->
     </div>
      <script src="FoodinJapan.js" defer></script>
     <script>
@@ -31,21 +33,17 @@ const logpsw=document.getElementById('logpsw').value;
 if(logipt===storeUsername&&logpsw===storeUserpsw){
     logipt.value='';
     logpsw.value='';
-    sessionStorage.setItem('isloggedin','true');
+   sessionStorage.setItem('isloggedin','true');
    window.location.href='usercreatedacc.html';
     
 }else{
-    alert('no data found!');
+    document.getElementById('error').innerText=`username or password is incorrect! Please tryagain.`;
+    
 }
 });
-document.getElementById('logIn').addEventListener('submit',e=>{
-    if(logipt===storeUsername&&logpsw===storeUserpsw){
-        sessionStorage.setItem('isloggedin','true');
-        window.location.href='usercreatedacc.html';
-    }else{
-        document.getElementById('error').innerText='username or password is incorrect';
-    }
-})
+
+
+
     </script>
 </body>
 </html>

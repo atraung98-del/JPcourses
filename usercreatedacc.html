@@ -5,23 +5,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="FoodinJapan.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>usercreatedacc</title>
 </head>
-<body>
+<body id="ucb">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="FoodinJapan.js"></script>
+    <nav id="ucan">
+        
     <div id="m-user">
-    <i class="fa-solid fa-circle-user" id="usericon"></i>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.dcr_DGXwzvm25b-op8xc3wHaHa?w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3" id="userImg">
+        <input type="file" id="fileInpt" accept="image/*" hidden>
+        <div id="userLocal">
     <p id="user-name"></p>
-    <div id="searchid">
-    <input type="search" id="search-bar" placeholder="Search products">
-    <i class="fa-solid fa-magnifying-glass" id="magnify"></i>
-    </div>
+        <p id="cuLoc"></p>
+        </div>
+   </div>
+    <div class="input-group mb-3" style="width:40%;height:24px">
+  <input type="text" class="form-control" placeholder="Search">
+  <button class="btn btn-info" type="submit"><i class="fa-solid fa-magnifying-glass" id="magnify"></i></button>
+</div>
     <div id="logOut">
-        <button id="logoutSession">Log Out</button>
+        <button type="button" class="btn btn-danger btn-sm" id="logoutSession"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</button>
     </div>
-    </div>
-    <div id="loader"></div>
+        <div id="cartcheck">
+            <i class="fa-solid fa-cart-arrow-down" style="font-size:24px;padding-top:8px;"></i><br>
+            <p id="cartCount"></p>
+        </div>
+        <div id="notification">
+            <i class="fa-regular fa-bell" style="padding-right:24px;"></i>
+        </div>
+    </nav>
+    <main id="ucg">
+        <div id="category">
+             <div id="current">
+            <p id="currentTime"></p>
+        </div>
+            <div id="cate">
+            <button type="button" class="btn btn-outline-secondary btn-sm" style="border-radius:100px;"><a href="#rm1">Snacks</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#rm">Readymade</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Kitchen-tools</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Foods</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Fishs</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Meats</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Vegetables</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm"  style="border-radius:100px;"><a href="#">Fruits</a></button>
+            </div>
+        </div>
+    </main>
+    <aside id="theside">
+        <h3 id="rm1">Snacks</h3>
+        <div class="ProductCate2">
+        <div id="card4">
+            <img src="https://cdn.pixabay.com/photo/2020/04/19/16/33/headphones-5064411_640.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p id="pricechange">300</p><p>円</p>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="changep"><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button><p id="quantity">1</p>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="minus"><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm" id="adding"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm" id="snackBuy">Buy Now</button>
+        </div>
+        <div id="card5">
+            <img src="https://www.androidauthority.com/wp-content/uploads/2014/07/LG-G3-Vs-HTC-One-M8-44-1620w-1080h.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p id="pricechange2">300</p><p>円</p>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="changep2"><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button><p id="quantity2">1</p>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" id="minus2"><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card6">
+            <img src="https://eftm.com/wp-content/uploads/2022/09/Kindle-Scribe_1920x1080_302.png" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card7">
+            <img src="https://media.istockphoto.com/photos/power-bank-charger-portable-powerbank-with-white-usb-cable-for-or-picture-id1336421256?b=1&k=20&m=1336421256&s=170667a&w=0&h=M0Z5-J4iLsssPEemcoemw5I49ITnMHp7SsWSMkX4mwY=" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card8">
+            <img src="https://cdn.pixabay.com/photo/2023/05/06/01/34/t-shirt-7973404_1280.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card9">
+            <img src="https://www.clnsmedia.com/wp-content/uploads/2022/03/photo-1552346154-21d32810aba3-scaled.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        </div>
+        <h3 id="rm">Readymade_____________</h3>
+         <div class="ProductCate2">
+        <div id="card40">
+            <img src="https://cdn.pixabay.com/photo/2023/05/06/01/34/t-shirt-7973404_1280.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card41">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.wkUsaT3bmtOchg08aQdV_QHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card42">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.wkUsaT3bmtOchg08aQdV_QHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card43">
+            <img src="https://i.ytimg.com/vi/eMfB2ja41TY/maxresdefault.jpg" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card44">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.wkUsaT3bmtOchg08aQdV_QHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        <div id="card45">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.wkUsaT3bmtOchg08aQdV_QHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="potato">
+            <h4>Snacks</h4>
+            <p>Rating </p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+                <div class="pinfo">
+                    <i class="fa-solid fa-circle" style="color: #74C0FC;font-size:10px;"></i><p>300 Yen</p>
+                    <button><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button>1
+                    <button><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></button>
+                </div><br>
+                <button type="button" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+                 <button type="button" class="btn btn-secondary btn-sm">Buy Now</button>
+        </div>
+        </div>
+    </aside>
     <script>
+
         const userdecle=document.getElementById('user-name');
         const ufirstname=sessionStorage.getItem('firstname').replace(/['"]/g, '');
         const ulastname=sessionStorage.getItem('lastname').replace(/['"]/g, '');
@@ -29,17 +298,166 @@
     userdecle.innerHTML=`${ufirstname}_${ulastname}`;
 }else{
     alert('No data found! Please try agian.')
-}
-// logout//
-// logoutSession.addEventListener('click',e=>{
-//     e.preventDefault();
-//     sessionStorage.setItem('username',fname+lname);
-//     sessionStorage.setItem('password',pswcom);
-//     sessionStorage.clear();
-//     window.location.href='login.html';
-    
-// })
+};
 
+// logout//
+logoutSession.addEventListener('click',e=>{
+    e.preventDefault();
+    alert('Are you sure to log out now');
+    window.location.href='login.html';
+    
+    
+});
+//  window.location.href='login.html';
+const logIn=document.querySelector('#logIn');
+function userreLog(){
+    const logEd=document.getElementById('logipt').value;
+const logPass=document.getElementById('logpsw').value;
+const storeName=sessionStorage.setItem('user',logipt);
+const storePass=sessionStorage.setItem('psw',logpsw);
+if(logEd===sessionStorage.getItem('user')&&logPass===sessionStorage.getItem('psw')){
+    window.location.href='usercreatedacc.html';
+}else{
+    alert('username or password is incorrect! please tryagain');
+}
+
+};
+const changep=document.getElementById('changep');
+const pricechange=document.getElementById('pricechange');
+const quantity=document.getElementById('quantity');
+const minus=document.getElementById('minus');
+
+let productPrice=300;
+changep.addEventListener('click',e=>{
+    e.preventDefault();
+    productPrice=productPrice+=300;
+    pricechange.textContent=`${productPrice}`;
+    
+});
+let allVal=1;
+changep.addEventListener('click',e=>{
+    e.preventDefault();
+    allVal=allVal+=1;
+    quantity.textContent=`${allVal}`;
+});
+minus.addEventListener('click',e=>{
+    e.preventDefault();
+    productPrice=productPrice-=300;
+    pricechange.textContent=`${productPrice}`;
+})
+minus.addEventListener('click',e=>{
+    e.preventDefault();
+    allVal=allVal-=1;
+    quantity.textContent=`${allVal}`;
+});
+const pricechange2=document.getElementById('pricechange2');
+const changep2=document.getElementById('changep2');
+const minus2=document.getElementById('minus2');
+const quantity2=document.getElementById('quantity2');
+productPrice2=300;
+allVal2=1;
+changep2.addEventListener('click',e=>{
+    e.preventDefault();
+    productPrice2=productPrice2+=300
+    pricechange2.textContent=`${productPrice2}`;
+    allVal2=allVal2+=1;
+    quantity2.textContent=`${allVal2}`;
+});
+minus2.addEventListener('click',e=>{
+    e.preventDefault();
+    productPrice2=productPrice2-=300;
+    pricechange2.textContent=`${productPrice2}`;
+    allVal2=allVal2-=1;
+    quantity2.textContent=`${allVal2}`;
+});
+
+
+const cartCount=document.getElementById('cartCount');
+const adding=document.getElementById('adding');
+productCount=0;
+adding.addEventListener('click',e=>{
+    e.preventDefault();
+    productCount=productCount+=1;
+    cartCount.innerHTML=`${allVal}`;
+   const productData= localStorage.setItem('m-product',`${productPrice},${allVal}`||'');
+   
+});
+
+const saveItemdata=localStorage.getItem('m-product');
+if(saveItemdata){
+    productData=saveItemdata;
+}
+// prifileimageupload//
+const userImg=document.getElementById('userImg');
+const fileInpt=document.getElementById('fileInpt');
+
+userImg.addEventListener('click',()=>{
+fileInpt.click();
+});
+fileInpt.addEventListener('change',()=>{
+    const file=fileInpt.files[0];
+    if(file){
+        const reader=new FileReader();
+        reader.onload=()=>{
+            userImg.src=reader.result;
+            localStorage.setItem('userImg',reader.result);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+const savedImage=localStorage.getItem('userImg');
+if(savedImage){
+    userImg.src=savedImage;
+}
+
+
+// program is work//
+
+// location readable//
+navigator.geolocation.getCurrentPosition(async position=>{
+    const lat=position.coords.latitude;
+    const lon=position.coords.longitude;
+
+    const res=await fetch(
+    `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+);
+
+    const data=await res.json();
+    const addressString=`${data.address.city ||data.address.town||''}
+    ${data.address.state||""}
+    ${data.address.country||""}`;
+
+    document.getElementById('cuLoc').innerHTML=` <i class="fa-solid fa-location-dot"></i> ${addressString}`;
+});
+// program is work//
+// livetime//
+function updateTime(){
+    const tiMe=new Date();
+    const hour=tiMe.getHours().toString().padStart(2,'0');
+    const minutes=tiMe.getMinutes().toString().padStart(2,'0');
+    const seconds=tiMe.getSeconds().toString().padStart(2,'0');
+
+    document.getElementById('currentTime').innerHTML=`${hour}:${minutes}:${seconds}`;
+}
+updateTime();
+setInterval(updateTime,1000);
+// program is work//
+
+// product-details//
+
+const card4=document.querySelector('#card4');
+
+let snacks=new Array(4);
+snacks[0]='<h2>Snacks</h2>';
+snacks[1]='<p>sjdjfhsodofeiofjsdljfojeokfajdsfoiej</p>';
+snacks[2]='<button>Buy now</button>';
+document.getElementById('snackBuy').addEventListener('click',e=>{
+    e.preventDefault();
+    card4.style.width='400px';
+   document.getElementById('card4').innerHTML=`${snacks}`;
+})
     </script>
+    <footer>
+    </footer>
 </body>
 </html>
