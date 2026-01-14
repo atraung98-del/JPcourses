@@ -143,7 +143,7 @@ nav span{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
-    gap:10px;
+    gap:8px;
     margin-top:4px;
 }
 #user-name{
@@ -348,71 +348,83 @@ nav{
 }
 #card4{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
 }
+
 @keyframes zoom {
   from { transform: scale(0.7); }
   to { transform: scale(1); }
 }
 #card5 {
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 }#card6 {
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 }#card7{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card8{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card9{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 }
 #card40{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card41{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card42{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card43{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card44{
    width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 } #card45{
     width:200px;
-    height:380px;
+    height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
+    animation:zoom 0.3s ease;
 }
 
 
@@ -423,13 +435,23 @@ nav{
     align-content:center;
     gap:20px;
 }
-.rm{
-    margin-left:45%;
-    margin-bottom:10%;
-    margin-top:5%;
+#rm{
+    padding-top:150px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left:43%;
+    margin-bottom:5%;
+    border-bottom:1px solid #535252;
+    width:200px;
+    text-align:center;
 }
 #rm1{
-    margin:10% 45% 5%;
+    padding-top:200px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left:35%;
+    margin-bottom:5%;
+    border-bottom:1px solid #535252;
+    width:400px;
+    text-align:center;
 }
 .pinfo{
     display:flex;
@@ -452,7 +474,7 @@ nav{
     
 }
 #notification{
-    padding-right:100px;
+    padding-right:10px;
     font-size:20px;
     padding-top:6px;
 }
@@ -474,4 +496,96 @@ nav{
     flex-direction:row;
     gap:2px;
     padding-bottom:10px;
+}
+/* ll */
+#aboutProduct{
+    padding-top:20px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:50px;
+    align-content: center;
+    display:none;
+}
+.potato{
+    animation:zoom 0.3s ease;
+    
+}
+@keyframes zoom {
+  from { transform: scale(0.7); }
+  to { transform: scale(1); }
+}
+#infoma{
+    width:400px;
+    animation:zoom 0.6s ease-in;
+    
+}
+
+#plusminus{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    width:80px;
+}
+#featurephoto{
+    display:flex;
+    flex-direction:row;
+    width:150px;
+    height:100px;
+    gap:25px;
+    align-items: center;
+    animation:zoom 1s ease-in-out;
+}
+#ProductPhoto{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+#p-pri{
+    display:flex;
+    flex-direction:row;
+    gap:2px;
+}
+#buy-process{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    justify-content:flex-start;
+}
+#f-br{
+    border-radius:4px;
+    box-shadow: 2px 2px 2px 2px rgb(170, 170, 170);
+    width:200px;height:100px;
+}
+#f-br1{
+    border-radius:4px;
+    box-shadow: 2px 2px 2px 2px rgb(170, 170, 170);
+    width:200px;height:100px;
+}
+#f-br2{
+    border-radius:4px;
+    box-shadow: 2px 2px 2px 2px rgb(170, 170, 170);
+    width:200px;height:100px;
+}
+#allProduct{
+    animation:zoom 0.4s ease-in;
+    width:50px;
+    margin-left:20px;
+    display:flex;
+    flex-direction:row;
+    margin-top:20%;
+}
+#allProduct:hover{
+    color:rgb(57, 146, 248);
+    cursor:pointer;
+}
+
+#arrowI{
+    font-size:24px;
+}
+#infoma{
+    display:none;
+}
+#toyou{
+    color:#3498db;
 }

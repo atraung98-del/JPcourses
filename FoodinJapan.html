@@ -10,7 +10,7 @@
 <body>
     <div id="logo">
         <nav>
-            <h2>Food<span>2You</span></h2>
+            <h2>Food<span id="toyou">2You</span></h2>
             <button id="btn-ac"><a href="createaccount.html">Create account</a></button>
         </nav>
     </div>
@@ -46,5 +46,13 @@ Country:  Japan
         </button>
     </div>
     <script src="FoodinJapan.js"></script>
+    <script>
+        window.onload=()=>{
+            const user=sessionStorage.getItem('username');
+            if(user===true){
+                window.location.href='usercreatedacc.html';
+        }
+    }
+    </script>
 </body>
 </html>

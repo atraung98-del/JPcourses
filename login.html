@@ -15,7 +15,8 @@
         <label>User name:</label>
         <input type="text" id="logipt"placeholder="Enter username" required>
         <label>Password:</label>
-        <input type="text" id="logpsw"placeholder="Enter password" required>
+        <input type="password" id="logpsw"placeholder="Enter password" required>
+        <input type="checkbox" onclick="logpsw.type=this.checked?'text':'password'">
         <button id="userlog">Log in</button>
          <p id="error" style="color:rgb(173, 98, 98);border-radius:4px;width:500px;"></p>
          <i class="fa-regular fa-circle-xmark" style="display:none;"></i>
@@ -41,6 +42,7 @@ if(logipt===storeUsername&&logpsw===storeUserpsw){
     
 }
 });
+
 
 
 
