@@ -87,8 +87,8 @@ setInterval(updateTime,1000);
 
 // product card5//
 const earphone1=new Array(2);
-earphone1[0]=`<h4>Earphone</h4>
-<p>Earphones are small loudspeakers that are held or worn close to the listener's ear or within the outer ear. 
+earphone1[0]=`<h4 id='earname'>Earphone</h4>`
+earphone1[1]=`<p>Earphones are small loudspeakers that are held or worn close to the listener's ear or within the outer ear. 
     They come in various forms, including hand-held receivers, headsets, and plug-in types.</p>
     <h5>About of Feature</h5><p>Earphones, especially wireless earbuds, offer a range of features 
 that enhance the listening experience, including sound quality, comfort, and connectivity options.</p>
@@ -97,6 +97,7 @@ that enhance the listening experience, including sound quality, comfort, and con
 <div id="plusminus">
 <button type="button" class="btn btn-outline-secondary btn-sm" id="changep" style="width:35px;height:30px;"><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button><p id="quantity" style='font-size:22px;'>1</p>
 <button type="button" class="btn btn-outline-secondary btn-sm" id="minus" style="width:35px;height:30px;"><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></i></button></div>
+<div id="noti" class="notification"></div>
 <div id="buy-process"><button type="button" class="btn btn-outline-primary btn-sm" id="adding"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
 <button type="button" class="btn btn-secondary btn-sm" id='productDeli'>Buy Now</button></div>`
 
@@ -169,27 +170,85 @@ document.getElementById('allProduct').addEventListener('click',e=>{
     aboutProduct.style.display='none';
     theside.style.display='block';
 });
-const card4p=document.getElementById('card4p');
-const card5=document.querySelector('#card5');
-card5.addEventListener('click',e=>{
+// const card4p=document.getElementById('card4p');
+// const card5=document.querySelector('#card5');
+// card5.addEventListener('click',e=>{
+//     e.preventDefault();
+//     theside.style.display='none';
+//     infoma.style.display='block';
+//    aboutProduct.style.display='flex';
+//    pchange.innerHTML=`<img src="https://www.androidauthority.com/wp-content/uploads/2014/07/LG-G3-Vs-HTC-One-M8-44-1620w-1080h.jpg"style="width:350px;height:300px;border-radius:10px;
+//     box-shadow: 2px 5px 5px 5px rgb(117, 117, 117);">`;
+//   const earphone=new Array(2);
+//    earphone[0]=`<h3>SmartPhone</h3>
+//    <p>Earphones are small loudspeakers that are held or worn close to the listener's ear or within the outer ear. 
+//     They come in various forms, including hand-held receivers, headsets, and plug-in types.</p>
+//     <h5>About of Feature</h5><p>Earphones, especially wireless earbuds, offer a range of features 
+// that enhance the listening experience, including sound quality, comfort, and connectivity options.</p>
+// <h5>Price</h5>
+// <div id='p-pri'><p>￥</p><p id='pricechange' style="font-size:20px;">300</p></div>
+// <div id="plusminus">
+// <button type="button" class="btn btn-outline-secondary btn-sm" id="changep" style="width:35px;height:30px;"><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button><p id="quantity" style='font-size:22px;'>1</p>
+// <button type="button" class="btn btn-outline-secondary btn-sm" id="minus" style="width:35px;height:30px;"><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></i></button></div>
+// <div id="buy-process"><button type="button" class="btn btn-outline-primary btn-sm" id="adding"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
+// <button type="button" class="btn btn-secondary btn-sm" id='productDeli'>Buy Now</button></div>`;
+//    document.getElementById('infoma').innerHTML=`${earphone}`;
+// });
+// Add to cart//
+// StoreData//
+const cartCount=document.getElementById('cartCount');
+const noti=document.getElementById('noti');
+document.getElementById('adding').addEventListener('click',e=>{
     e.preventDefault();
-    theside.style.display='none';
-    infoma.style.display='block';
-   aboutProduct.style.display='flex';
-   pchange.innerHTML=`<img src="https://www.androidauthority.com/wp-content/uploads/2014/07/LG-G3-Vs-HTC-One-M8-44-1620w-1080h.jpg"style="width:350px;height:300px;border-radius:10px;
-    box-shadow: 2px 5px 5px 5px rgb(117, 117, 117);">`;
-  const earphone=new Array(2);
-   earphone[0]=`<h3>SmartPhone</h3>
-   <p>Earphones are small loudspeakers that are held or worn close to the listener's ear or within the outer ear. 
-    They come in various forms, including hand-held receivers, headsets, and plug-in types.</p>
-    <h5>About of Feature</h5><p>Earphones, especially wireless earbuds, offer a range of features 
-that enhance the listening experience, including sound quality, comfort, and connectivity options.</p>
-<h5>Price</h5>
-<div id='p-pri'><p>￥</p><p id='pricechange' style="font-size:20px;">300</p></div>
-<div id="plusminus">
-<button type="button" class="btn btn-outline-secondary btn-sm" id="changep" style="width:35px;height:30px;"><i class="fa-solid fa-plus" style="color: #3f3f3f;"></i></button><p id="quantity" style='font-size:22px;'>1</p>
-<button type="button" class="btn btn-outline-secondary btn-sm" id="minus" style="width:35px;height:30px;"><i class="fa-solid fa-minus" style="color: #3b3b3b;"></i></i></button></div>
-<div id="buy-process"><button type="button" class="btn btn-outline-primary btn-sm" id="adding"><i class="fa-solid fa-cart-arrow-down"></i>Add to cart</button>
-<button type="button" class="btn btn-secondary btn-sm" id='productDeli'>Buy Now</button></div>`;
-   document.getElementById('infoma').innerHTML=`${earphone}`;
+    cartCount.textContent=`${priceval}`;
+    const saveQuantity=[];
+    saveQuantity.push(priceval)
+    localStorage.setItem('pricevalue',JSON.stringify(saveQuantity));
+    savecartData();
+    showMsg(`Earphone is added!`);
+})
+function savecartData(){
+  const storeQ=JSON.parse(localStorage.getItem('pricevalue'));
+  if(savecartData){
+    saveQuantity=savecartData;
+  }
+  console.log(storeQ);
+};
+// notification cartadding//
+function showMsg(msg){
+    noti.textContent=msg;
+    noti.style.display='inline-block',backgroundColor='green';
+    setTimeout(()=>{
+        noti.style.display='none';
+    },2000);
+}
+// notification cartadding//
+// ordertheproduct-detail//
+const cartcheck=document.querySelector('#cartcheck');
+const cartcount=document.querySelector('#cartcount');
+const reserve=document.getElementById('reserve');
+const reserveProduct=new Array(3);
+reserveProduct[0]=`<div id="tableData">
+<div style="background-color:grey;width:100px;height:400px;"></div>
+<div id='detailOrder'>
+<table>
+<tr>
+    <td>hi</td>
+    <td>${localStorage.getItem('pricevalue')}</td>
+</tr>
+
+</table>
+</div>
+</div>`;
+
+
+cartcheck.addEventListener('click',e=>{
+    e.preventDefault();
+    reserve.style.display='block';
+    document.getElementById('ucan').style.display='none';
+    reserve.innerHTML=`${reserveProduct}`;
 });
+// needtomodifine//
+const earname=earphone1[0];
+let ear=`${earname}`;
+console.log(ear);
