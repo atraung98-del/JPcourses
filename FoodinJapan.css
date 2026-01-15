@@ -328,8 +328,8 @@ nav{
     border-color: #3498db;
 }
 .potato{
-    width:200px;
-    height:150px;
+    width:400px;
+    height:300px;
 }
 #potato1{
     width:200px;
@@ -339,15 +339,15 @@ nav{
     width:200px;
     height:150px;
 }
-#ProductCate{
+#ProductCate2{
     display:flex;
     flex-direction:row;
-    justify-content:flex-start;
+    justify-content:center;
     align-content:center;
     gap:20px;
 }
 #card4{
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
@@ -359,13 +359,13 @@ nav{
   to { transform: scale(1); }
 }
 #card5 {
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
 }#card6 {
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
@@ -469,7 +469,7 @@ nav{
 }
 #cartCount{
     margin-bottom:15px;
-    color:#EA79AC;
+    color:#fd0000;
     font-weight:bold;
     
 }
@@ -527,6 +527,12 @@ nav{
     gap:10px;
     width:80px;
 }
+#plusminus1{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    width:80px;
+}
 #featurephoto{
     display:flex;
     flex-direction:row;
@@ -542,6 +548,11 @@ nav{
     gap:20px;
 }
 #p-pri{
+    display:flex;
+    flex-direction:row;
+    gap:2px;
+}
+#p-pri1{
     display:flex;
     flex-direction:row;
     gap:2px;
@@ -588,4 +599,37 @@ nav{
 }
 #toyou{
     color:#3498db;
+}
+#discount{
+    animation:makeani 0.2s;
+}
+@keyframes makeani{
+    0%{
+        transform: translateX(-20px);
+    }
+};
+#reserve{
+    display:none;
+}
+#tableData{
+    display:flex;
+    flex-direction:row;
+}
+.noticatification{
+    display:none;
+}
+#noti{
+    background-color:rgb(60, 248, 201);
+    display:none;
+    width:200px;
+    height:30px;
+    animation:animal 0.5s;
+    color:rgb(41, 40, 40);
+    border-radius:4px;
+    text-align:center;
+}
+@keyframes animal{
+    0%{
+        transform: translateY(150px);
+    }
 }
