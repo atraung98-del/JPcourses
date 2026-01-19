@@ -49,13 +49,33 @@ nav span{
     background-color:#EA79AC;
     border:none;
     border-radius:40px;
+    animation:nbtn ease-in 1.4s;
+}
+@keyframes nbtn{
+    0%{
+        transform:translateY(45px);
+    }
 }
 #detailadd{
     width:400px;
     height:100px;
+    animation:address ease-in 1s;
 }
 #address{
     margin:50px 280px;
+    
+}
+@keyframes address{
+    0%{
+        transform: translateY(45px);
+    }
+}
+@media(max-width:480px){
+    #address{
+        margin:auto;
+        width:400px;
+        padding-top:20px;
+    }
 }
 /* formdeco */
 #formdeco{
@@ -390,50 +410,54 @@ nav{
     animation:zoom 0.3s ease;
 }
 #card40{
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
+    display:flex;
+    flex-direction:row;
+    gap:8px;
 } #card41{
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
+     display:flex;
+    flex-direction:row;
+    gap:8px;
 } #card42{
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
+    display:flex;
+    flex-direction:row;
+    gap:8px;
 } #card43{
-    width:200px;
+    width:400px;
     height:300px;
     border-radius:4px;
     box-shadow:2px 2px 3px 3px#ccc;
     animation:zoom 0.3s ease;
-} #card44{
-   width:200px;
-    height:300px;
-    border-radius:4px;
-    box-shadow:2px 2px 3px 3px#ccc;
-    animation:zoom 0.3s ease;
-} #card45{
-    width:200px;
-    height:300px;
-    border-radius:4px;
-    box-shadow:2px 2px 3px 3px#ccc;
-    animation:zoom 0.3s ease;
+    display:flex;
+    flex-direction:row;
+    gap:8px;
 }
-
+.potato1{
+    width:195px;
+    height:150px;
+}
+/* 4in1 */
 
 .ProductCate2{
     display:flex;
     flex-direction:row;
     justify-content:flex-start;
     align-content:center;
-    gap:20px;
+    gap:25px;
 }
 #rm{
     padding-top:150px;

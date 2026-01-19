@@ -248,7 +248,28 @@ cartcheck.addEventListener('click',e=>{
     document.getElementById('ucan').style.display='none';
     reserve.innerHTML=`${reserveProduct}`;
 });
-// needtomodifine//
-const earname=earphone1[0];
-let ear=`${earname}`;
-console.log(ear);
+// discount//
+const discount=document.getElementById('discount');
+discount.textContent="10%Off";
+discount.style.backgroundColor='rgb(255, 0, 34)';
+discount.style.width='100px';
+discount.style.color='white';
+// discount1//
+const discount1=document.getElementById('discount1');
+discount1.textContent="20%Off";
+discount1.style.backgroundColor='rgb(255, 0, 34)';
+discount1.style.width='100px';
+discount1.style.color='white';
+// discount2//
+const discount2=document.getElementById('discount2');
+discount2.textContent="20%Off";
+discount2.style.backgroundColor='rgb(255, 0, 34)';
+discount2.style.width='100px';
+discount2.style.color='white';
+
+// discount3//
+const discount3=document.getElementById('discount3');
+discount3.textContent="20%Off";
+discount3.style.backgroundColor='rgb(255, 0, 34)';
+discount3.style.width='100px';
+discount3.style.color='white';
