@@ -5,14 +5,14 @@
 #delibox{
     font-size:50px;
 }
-nav{
+ nav{
     display:flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content:center;
     /* background-color:#5FC6B0; */
     height:40px;
-    padding-top:20px;
-}
+    margin-top:20px;
+}  
 #btn-ac{
     width:150px;
     height:24px;
@@ -44,11 +44,7 @@ nav span{
     color:white;
 }
 #ndbtn{
-    width:150px;
-    height:24px;
-    background-color:#EA79AC;
-    border:none;
-    border-radius:40px;
+   
     animation:nbtn ease-in 1.4s;
 }
 @keyframes nbtn{
@@ -62,7 +58,7 @@ nav span{
     animation:address ease-in 1s;
 }
 #address{
-    margin:50px 280px;
+    margin: auto 100px;
     
 }
 @keyframes address{
@@ -107,44 +103,29 @@ nav span{
     background-color:#69bff8;
 }
 #f-name{
+    height:24px;
     outline:none;
-    height:24px;
-    width:250px;
     padding:2px;
-    border:none;
-    border-radius:4px;
-    padding:4px;
-    height:24px;
+    width:250px;
+
 }
 #l-name{
+    height:24px;
     outline:none;
-    height:24px;
-    width:250px;
     padding:2px;
-    border:none;
-    border-radius:4px;
-    padding:4px;
-    height:24px;
+    width:250px;
 }
 #p-cr{
+    height:24px;
     outline:none;
-    height:24px;
-    width:250px;
     padding:2px;
-    border:none;
-    border-radius:4px;
-    padding:4px;
-    height:24px;
+    width:250px;
 }
 #p-co{
+    height:24px;
     outline:none;
-    height:24px;
-    width:250px;
     padding:2px;
-    border:none;
-    border-radius:4px;
-    padding:4px;
-    height:24px;
+    width:250px;
 }
 #f-img{
     width:400px;

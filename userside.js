@@ -160,6 +160,7 @@ card4.addEventListener('click',e=>{
     theside.style.display='none';
     infoma.style.display='block';
    aboutProduct.style.display='flex';
+    
    pchange.innerHTML=`<img src="https://img.freepik.com/premium-photo/wireless-headphones-custom-design_985323-2160.jpg"style="width:350px;height:300px;border-radius:10px;
     box-shadow: 2px 5px 5px 5px rgb(117, 117, 117);">`;
 });
