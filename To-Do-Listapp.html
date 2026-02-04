@@ -27,10 +27,17 @@
         .list-group-item{
             padding:0;
             padding-left:4px;
-            height:40px;
-            with:600px;
+            height:30px;
+            width:600px;
         }
-        
+        .taskamount{
+            background-color:red;
+            margin-left:4px;
+            border-radius:10px;
+            font-size:20px;
+            display:block;
+            text-align:center;
+        }
     </style>
 </head>
 <body>
@@ -38,7 +45,7 @@
 
         <div class="container" style="max-width: 600px">
 
-            <a href="#" class="navbar-brand">Todo</a>
+            <a href="#" class="navbar-brand" id="taskcount">Todo</a>
 
         </div>
 
@@ -50,7 +57,7 @@
 
         <form class="input-group my-4">
 
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" placeholder="Enter Your tasks" required>
 
             <button class="btn btn-dark">Add</button>
 
@@ -64,17 +71,23 @@
 
             
             let addtask=document.querySelector('button');
+             
+            taskCount();
+
             document.querySelector('form').onsubmit=(e)=>{
 
                 e.preventDefault();
                 createItem();
+                
+
                 document.querySelector('input').value='';
                 document.querySelector('input').focus();
-            
+
             }
             function createItem(){
 
                 let text=document.querySelector('input').value;
+                 if(text=="")return false;
                 let li=document.createElement('li');
                 li.classList.add('mytask');
                 li.textContent=text;
@@ -84,9 +97,13 @@
                  let del=document.createElement('a');
                 del.setAttribute('href','#');
                 del.classList.add("fa-solid","fa-trash","text-danger","float-end","pt-1");
-                del.onclick=()=>
+                del.onclick=()=>{
                     li.remove();
-                
+                     if( document.querySelector('.taskamount').textContent>=1){
+                         
+                        document.querySelector('.taskamount').textContent--;
+                   }
+                }
                 let check=document.createElement('a');
                 check.setAttribute('href','#');
                 check.classList.add('checktask');
@@ -94,18 +111,30 @@
                 check.onclick=()=>{
                     document.querySelector('#done').appendChild(li);
                     check.remove();
+                   if( document.querySelector('.taskamount').textContent>=1){
+                     document.querySelector('.taskamount').textContent--;
+                   }
                 }
                 li.appendChild(del)
                 li.appendChild(check);
 
+                
                 document.querySelector('#todo').appendChild(li);
+                document.querySelector('.taskamount').textContent++;
+                
                 let setdata=localStorage.setItem('data',JSON.stringify(text));
                 
+            }
+            function taskCount(){
+                let taskcounter=document.querySelector('#taskcount');
+                let spanTask=document.createElement('span');
+                spanTask.classList.add('taskamount');
+                spanTask.textContent=0;
+                taskcounter.appendChild(spanTask);
             }
             
     </script>
 
     
 </body>
-
 </html>
