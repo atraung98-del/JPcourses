@@ -8,10 +8,17 @@
     <title>createaccount</title>
     <style>
         body{
+            background:linear-gradient(45deg,blue,red);
+            color:white;
+            margin:0 auto;
+            padding:0.5px;
+            max-width:100%;
+            background-repeat:no-repeat;
+            position:relative;
             
-            background-image:url('https://img.freepik.com/premium-vector/blue-green-gradient-background_1055519-2269.jpg');
+            /* background-image:url('https://img.freepik.com/premium-vector/blue-green-gradient-background_1055519-2269.jpg');
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover; */
         }
         #submitBtn{
             width:100px;
@@ -26,6 +33,16 @@
     </style>
 </head>
 <body> 
+     <div id="popup"></div>
+
+    <div id="accInfo">
+        <h3>You created account successfully
+            <a href="#">&times;</a>
+        </h3>
+        <button id="ok">OK</button>
+    </div>
+
+     
     <div id="formdeco">
     <form id="myuser">
         <label>First Name:</label>
@@ -36,17 +53,15 @@
         <input type="text" id="p-cr" placeholder="Create password" required>
         <label>Comfirm Password</label>
         <input type="text" id="p-co" placeholder="Comfirm password" required>
-        <button id="submitBtn" onclick="ClickForm()">Create account</button>
+        <button id="submitBtn">Create account</button>
         <p id="nomatchpass"></p>
     </form>
     <div id="featureimg">
         <img src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7517.jpg?w=1480" id="f-img">
     </div>
-    <script src="FoodinJapan.js"></script>
+    
     </div>
-    
-    
-   
+     <script src="FoodinJapan.js"></script>
 </body>
 </html>
 

@@ -11,8 +11,12 @@ const userdecle=document.getElementById('user-name');
 const logoutSession=document.getElementById('logoutSession');
 logoutSession.addEventListener('click',e=>{
     e.preventDefault();
-    alert('Are you sure to log out now');
-    window.location.href='login.html';
+    confirm('Are you sure to log out now');
+    if(click=true){
+    window.location.href='login.html';}
+    else{
+        return window.location.href='usercreatedacc.html';
+    }
     
     
 });
@@ -70,8 +74,13 @@ navigator.geolocation.getCurrentPosition(async position=>{
     ${data.address.state||""}
     ${data.address.country||""}`;
 
-    document.getElementById('cuLoc').innerHTML=` <i class="fa-solid fa-location-dot"></i> ${addressString}`;
+   const located= document.getElementById('cuLoc').innerHTML=` <i class="fa-solid fa-location-dot"></i> ${addressString}`;
+   localorder()
+   console.log(located)
+   
+   
 });
+
 // program is work//
 // livetime//
 function updateTime(){
@@ -117,12 +126,20 @@ changep.addEventListener('click',e=>{
     quantity.textContent=`${priceval}`;
     priceyen=priceyen+=300;
     pricechange.textContent=`${priceyen}`;
+    
 });
+
 minus.addEventListener('click',e=>{
     e.preventDefault();
-    priceval=priceval-=1;
+    // priceval=priceval-=1;
+    if(priceval>1){
+        priceval--;
+    }
     quantity.textContent=`${priceval}`;
-    priceyen=priceyen-=300;
+    // priceyen=priceyen-=300;
+    if(priceyen>300){
+        priceyen-=300;
+    }
     pricechange.textContent=`${priceyen}`;
 });
 // change card4-product//
@@ -160,7 +177,6 @@ card4.addEventListener('click',e=>{
     theside.style.display='none';
     infoma.style.display='block';
    aboutProduct.style.display='flex';
-    
    pchange.innerHTML=`<img src="https://img.freepik.com/premium-photo/wireless-headphones-custom-design_985323-2160.jpg"style="width:350px;height:300px;border-radius:10px;
     box-shadow: 2px 5px 5px 5px rgb(117, 117, 117);">`;
 });
@@ -169,6 +185,7 @@ document.getElementById('allProduct').addEventListener('click',e=>{
     document.querySelector('#card4');
     infoma.style.display='none';
     aboutProduct.style.display='none';
+    document.getElementById('reserve').style.display='none';
     theside.style.display='block';
 });
 // const card4p=document.getElementById('card4p');
@@ -208,11 +225,9 @@ document.getElementById('adding').addEventListener('click',e=>{
     savecartData();
     showMsg(`Earphone is added!`);
 })
+
 function savecartData(){
-  const storeQ=JSON.parse(localStorage.getItem('pricevalue'));
-  if(savecartData){
-    saveQuantity=savecartData;
-  }
+  const storeQ=localStorage.getItem('pricevalue');
   console.log(storeQ);
 };
 // notification cartadding//
@@ -234,43 +249,46 @@ reserveProduct[0]=`<div id="tableData">
 <div id='detailOrder'>
 <table>
 <tr>
-    <td>hi</td>
-    <td>${localStorage.getItem('pricevalue')}</td>
+    <td> Order Name-${earphone1[0]}</td>
 </tr>
-
+<tr>
+    <td>Order Amount ${localStorage.getItem('pricevalue')}</td>
+    
+</tr>
+<tr><td>Your Address</td></tr>
+   <tr> <td><input type="checkbox" id='orderLocation' onclick='localorder()'></tr>
+    <tr><td><p>Use Current Location</p></tr></td>
+    <tr><td><p id='orderPoint'></p>
+</tr>
 </table>
 </div>
 </div>`;
 
-
+   function localorder(){
+    console.log(located);
+   }
 cartcheck.addEventListener('click',e=>{
     e.preventDefault();
     reserve.style.display='block';
-    document.getElementById('ucan').style.display='none';
+    document.getElementById('theside').style.display='none';
+    document.getElementById('aboutProduct').style.display='none';
     reserve.innerHTML=`${reserveProduct}`;
 });
 // discount//
-const discount=document.getElementById('discount');
-discount.textContent="10%Off";
-discount.style.backgroundColor='rgb(255, 0, 34)';
-discount.style.width='100px';
-discount.style.color='white';
-// discount1//
-const discount1=document.getElementById('discount1');
-discount1.textContent="20%Off";
-discount1.style.backgroundColor='rgb(255, 0, 34)';
-discount1.style.width='100px';
-discount1.style.color='white';
-// discount2//
-const discount2=document.getElementById('discount2');
-discount2.textContent="20%Off";
-discount2.style.backgroundColor='rgb(255, 0, 34)';
-discount2.style.width='100px';
-discount2.style.color='white';
+// box//
+let box=1;
+setInterval(next,3000);
+          function next(){
 
-// discount3//
-const discount3=document.getElementById('discount3');
-discount3.textContent="20%Off";
-discount3.style.backgroundColor='rgb(255, 0, 34)';
-discount3.style.width='100px';
-discount3.style.color='white';
+            document.querySelector('#box'+box).style.display='none';
+            box++;
+            if(box>4)box=1;
+            document.querySelector('#box'+box).style.display='block';
+          }
+          function pre(){
+            document.querySelector('#box'+box).style.display='none';
+            box--;
+            if(box<1)box=4;
+            document.querySelector('#box'+box).style.display='block';
+          }
+// box//
