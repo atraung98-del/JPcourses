@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f0f0f,#1c1c1c);
+}
+
+/* CARD */
+.container{
+  width:90%;
+  max-width:380px;
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 0 25px rgba(255,0,0,0.2);
+}
+
+/* TITLE */
+h2{
+  text-align:center;
+  color:#ff3b3b;
+  margin-bottom:20px;
+}
+
+/* INPUT */
+.input-group{
+  margin-bottom:15px;
+}
+
+.input-group label{
+  color:#ccc;
+  font-size:14px;
+}
+
+.input-group input{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:none;
+  border-radius:8px;
+  background:#2a2a2a;
+  color:#fff;
+  outline:none;
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#ff3b3b;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff1f1f;
+}
+
+/* LINKS */
+.links{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+}
+
+.links a{
+  color:#aaa;
+  font-size:13px;
+  text-decoration:none;
+}
+
+.links a:hover{
+  color:#fff;
+}
+
+/* ERROR */
+#error{
+  margin-top:10px;
+  font-size:13px;
+  color:#ff6b6b;
+}
+
+/* MOBILE */
+@media(max-width:400px){
+  .container{
+    padding:20px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+
+  <form id="logIn">
+    
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" id="logipt" placeholder="Enter username" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="logpsw" placeholder="Enter password" required>
+    </div>
+
+    <button type="submit">Login 🚀</button>
+
+    <p id="error"></p>
+
+    <div class="links">
+      <a href="#">Forgot password?</a>
+      <a href="createaccount.html">Create account</a>
+    </div>
+
+  </form>
+</div>
+
+<script src="FoodinJapan.js"></script>
+
+<script>
+const storeUsername=sessionStorage.getItem('username');
+const storeUserpsw=sessionStorage.getItem('pswcom')?.replace(/['"]/g,'');
+
+document.getElementById('logIn').addEventListener('submit',e=>{
+  e.preventDefault();
+
+  const logipt=document.getElementById('logipt').value;
+  const logpsw=document.getElementById('logpsw').value;
+
+  if(logipt===storeUsername && logpsw===storeUserpsw){
+    sessionStorage.setItem('isloggedin','true');
+    window.location.href='usercreatedacc.html';
+  }else{
+    document.getElementById('error').innerText="❌ Username or password incorrect!";
+  }
+});
+</script>
+
+</body>
+</html>
