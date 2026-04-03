@@ -17,6 +17,19 @@ This is a simple Food E-commerce web application where users can explore food it
 
 ## 📂 Project Structure
 Food-ecommerce/
-  ├── FoodinJapan.html
-  ├── FoodinJapan.css
-  ├── createaccount.js
+  - FoodinJapan.html
+  - FoodinJapan.js
+  - FoodinJapan.css
+  - createaccount.js
+  - login.html
+  - usercreatedacc.html
+  - userside.js
+  
+## 📸 Screenshots
+(Add screenshot later)
+
+## 🔗 Live Demo
+(Add GitHub Pages link later)
+
+## 👤 Author
+Aung Thura
