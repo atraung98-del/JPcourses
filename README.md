@@ -29,7 +29,7 @@ Food-ecommerce/
 (Add screenshot later)
 
 ## 🔗 Live Demo
-(Add GitHub Pages link later)
+https://atraung98-del.github.io/Ecommerce/Food-ecommerce/FoodinJapan.html
 
 ## 👤 Author
 Aung Thura
