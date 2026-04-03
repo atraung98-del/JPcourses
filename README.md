@@ -16,3 +16,7 @@ This is a simple Food E-commerce web application where users can explore food it
 - Bootstrap
 
 ## 📂 Project Structure
+Food-ecommerce/
+  ├── FoodinJapan.html
+  ├── FoodinJapan.css
+  ├── createaccount.js
