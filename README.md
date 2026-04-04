@@ -26,7 +26,8 @@ Food-ecommerce/
   - userside.js
   
 ## 📸 Screenshots
-(Add screenshot later)
+![Screenshot_4-4-2026_22134_127 0 0 1](https://github.com/user-attachments/assets/f86fe3eb-be7d-4494-a3e3-7deb9b90833e)
+
 
 ## 🔗 Live Demo
 https://atraung98-del.github.io/Ecommerce/Food-ecommerce/FoodinJapan.html
